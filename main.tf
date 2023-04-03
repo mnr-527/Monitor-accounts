@@ -196,7 +196,7 @@ resource "aws_cloudwatch_event_target" "Lambda_tf" {
   schedule_expression = "cron(5,35 14 * * ? *)"
 
   target {
-    arn      = aws_lambda_function.terraform_lambda_func_tf_back.arn
+    arn      = arn:aws:lambda:us-east-1:556276873924:function:checkorg
     role_arn = aws_iam_role.Scheduler_role_tf.arn
   }
   
